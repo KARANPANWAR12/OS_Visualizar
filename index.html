@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live CPU Scheduling Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🖥️ Live CPU Scheduling Visualizer</h1>
+    <p class="subtitle">Real-time algorithm simulation with interactive Gantt charts</p>
+
+    <div class="input-section">
+      <div class="form-group">
+        <label>Select Algorithms:</label>
+        <div class="algorithm-checkboxes">
+          <label class="checkbox-label">
+            <input type="checkbox" id="fcfs" value="1" checked> FCFS
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="rr" value="2" checked> Round Robin
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="spn" value="3" checked> SPN
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="srt" value="4" checked> SRT
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="hrrn" value="5" checked> HRRN
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Round Robin Quantum:</label>
+        <input id="quantum" type="number" value="3" min="1" max="10" title="Time quantum for Round Robin">
+      </div>
+
+      <div class="form-group">
+        <label>Process Data (name,arrival,burst):</label>
+        <textarea id="processData" rows="6" placeholder="P1,0,4&#10;P2,1,3&#10;P3,2,5">P1,0,6
+P2,1,4
+P3,2,2
+P4,3,3
+P5,5,1</textarea>
+      </div>
+
+      <button type="button" id="runBtn">🚀 Run Live Simulation</button>
+      <button type="button" id="clearBtn">🗑️ Clear Results</button>
+    </div>
+
+    <div id="results" class="results-section">
+      <h2>📊 Simulation Results</h2>
+      <div id="output"></div>
+    </div>
+
+    <div id="comparison" class="comparison-section">
+      <h2>📈 Algorithm Comparison</h2>
+      <div id="comparisonTable"></div>
+    </div>
+  </div>
+
+  <script src="live-scheduler.js"></script>
+</body>
+</html>
