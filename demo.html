@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live CPU Scheduler Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .demo-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .feature {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #1976d2;
+        }
+        .feature h3 {
+            color: #1976d2;
+            margin-top: 0;
+        }
+        .demo-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        .demo-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .screenshot {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin: 20px 0;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🚀 Live CPU Scheduling Visualizer Demo</h1>
+        
+        <div class="center">
+            <a href="index.html" class="demo-button">🖥️ Launch Live Visualizer</a>
+        </div>
+        
+        <div class="feature">
+            <h3>✨ Key Features</h3>
+            <ul>
+                <li><strong>Real-time Simulation:</strong> Run algorithms instantly in your browser</li>
+                <li><strong>Interactive Gantt Charts:</strong> Visual timeline with process execution</li>
+                <li><strong>Multiple Algorithms:</strong> FCFS, Round Robin, SPN, SRT, HRRN</li>
+                <li><strong>Performance Comparison:</strong> Side-by-side algorithm analysis</li>
+                <li><strong>Responsive Design:</strong> Works on desktop and mobile devices</li>
+            </ul>
+        </div>
+        
+        <div class="feature">
+            <h3>🎯 How to Use</h3>
+            <ol>
+                <li>Select the scheduling algorithms you want to compare</li>
+                <li>Set the Round Robin quantum (if selected)</li>
+                <li>Enter process data in format: <code>ProcessName,ArrivalTime,BurstTime</code></li>
+                <li>Click "🚀 Run Live Simulation" to see results instantly</li>
+                <li>Compare algorithm performance in the comparison table</li>
+            </ol>
+        </div>
+        
+        <div class="feature">
+            <h3>📊 Sample Process Data</h3>
+            <p>Try these sample datasets:</p>
+            
+            <h4>Basic Example:</h4>
+            <pre>P1,0,6
+P2,1,4
+P3,2,2
+P4,3,3
+P5,5,1</pre>
+            
+            <h4>Heavy Load Example:</h4>
+            <pre>P1,0,10
+P2,1,8
+P3,2,6
+P4,3,4
+P5,4,2
+P6,5,12</pre>
+            
+            <h4>Simultaneous Arrival:</h4>
+            <pre>P1,0,5
+P2,0,3
+P3,0,8
+P4,0,2</pre>
+        </div>
+        
+        <div class="feature">
+            <h3>🔍 Algorithm Comparison</h3>
+            <p>The visualizer automatically highlights the best performing algorithm for each metric:</p>
+            <ul>
+                <li><strong>Lowest Average Turnaround Time</strong> - Overall efficiency</li>
+                <li><strong>Lowest Average Waiting Time</strong> - User experience</li>
+                <li><strong>Highest CPU Utilization</strong> - Resource efficiency</li>
+            </ul>
+        </div>
+        
+        <div class="feature">
+            <h3>🎨 Visual Features</h3>
+            <ul>
+                <li><strong>ASCII Gantt Charts:</strong> Clear timeline visualization</li>
+                <li><strong>Process Tables:</strong> Detailed metrics for each process</li>
+                <li><strong>Summary Statistics:</strong> Key performance indicators</li>
+                <li><strong>Responsive Layout:</strong> Optimized for all screen sizes</li>
+                <li><strong>Color-coded Results:</strong> Easy identification of best performers</li>
+            </ul>
+        </div>
+        
+        <div class="center">
+            <a href="index.html" class="demo-button">🖥️ Start Visualizing Now!</a>
+        </div>
+        
+        <div class="feature">
+            <h3>💡 Tips for Best Results</h3>
+            <ul>
+                <li>Use process names like P1, P2, P3 for clarity</li>
+                <li>Keep arrival times reasonable (0-10 range)</li>
+                <li>Vary burst times to see algorithm differences</li>
+                <li>Try different Round Robin quantum values (1-5)</li>
+                <li>Compare at least 2-3 algorithms for meaningful analysis</li>
+            </ul>
+        </div>
+        
+        <div class="center" style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #eee;">
+            <p style="color: #7f8c8d;">
+                <strong>Live CPU Scheduling Visualizer</strong><br>
+                Real-time algorithm simulation and analysis tool
+            </p>
+        </div>
+    </div>
+</body>
+</html>
